@@ -1,0 +1,5 @@
+<div [hidden]="!isShow" class="booking-settings" [style.visibility] = "getStyle()"  [class.booking-settings-more] ="isShowMore">
+  <app-booking-details [hidden]="isShowTable"></app-booking-details>
+  <app-table-details [hidden]= "!isShowTable" ></app-table-details>
+  <app-booking-more-details class = "booking-more-details" ></app-booking-more-details>
+</div>

@@ -1,0 +1,21 @@
+<div class="tableviewWrapper">
+    <div class="tableview">
+        <ngx-datatable
+            class="material"
+            [rows]="bookings"
+            [columns]="columns"
+            [columnMode]="'flex'"
+            [headerHeight]="50"
+            [footerHeight]="50"
+            [rowHeight]="'auto'"
+            [externalPaging]="true"
+            [count]="totalElements"
+            [offset]="pageNumber"
+            [limit]="pageSize"
+            (page)='setPage($event)'>
+        </ngx-datatable>
+    </div>
+    <div class="detailsWrapper">
+        <a class="items" href="" *ngFor="let item of bookings;">{{ 'GUESTS_BOOKINGS_MORE' | translate }}</a>
+    </div>
+</div>
